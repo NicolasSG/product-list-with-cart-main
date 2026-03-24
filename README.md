@@ -43,16 +43,16 @@ Users should be able to:
       <img src="./screenshots/desktop-design-order-confirmation.png" width="300px" alt="Order Confirmation"/><br />
       <sub><b>Order Confirmation</b></sub>
     </td>
+    <td align="center">
+      <img src="./screenshots/mobile-design-order-confirmation.png" width="300px" alt="Mobile Confirmation"/><br />
+      <sub><b>Mobile Confirmation</b></sub>
+    </td>
   </tr>
   <tr>
     <td align="center">
       <img src="./screenshots/mobile-design-empty.png" width="300px" alt="Mobile Empty"/><br />
       <sub><b>Mobile Empty</b></sub>
-    </td>
-    <td align="center">
-      <img src="./screenshots/mobile-design-order-confirmation.png" width="300px" alt="Mobile Confirmation"/><br />
-      <sub><b>Mobile Confirmation</b></sub>
-    </td>
+    </td>    
     <td align="center">
       <img src="./screenshots/mobile-design-selected.png" width="300px" alt="Mobile Selected"/><br />
       <sub><b>Mobile Selected</b></sub>
