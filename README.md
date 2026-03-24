@@ -27,14 +27,38 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
-![](./screenshots/active-states.png)
-![](./screenshots/desktop-design-empty.png)
-![](./screenshots/desktop-design-order-confirmation.png)
-![](./screenshots/mobile-design-empty.png)
-![](./screenshots/mobile-design-order-confirmation.png)
-![](./screenshots/mobile-design-selected.png)
+<table>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/active-states.png" width="300px" alt="Active States"/><br />
+      <sub><b>Active States</b></sub>
+    </td>
+    <td align="center">
+      <img src="./screenshots/desktop-design-empty.png" width="300px" alt="Desktop Empty"/><br />
+      <sub><b>Desktop Empty</b></sub>
+    </td>
+    <td align="center">
+      <img src="./screenshots/desktop-design-order-confirmation.png" width="300px" alt="Order Confirmation"/><br />
+      <sub><b>Order Confirmation</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/mobile-design-empty.png" width="300px" alt="Mobile Empty"/><br />
+      <sub><b>Mobile Empty</b></sub>
+    </td>
+    <td align="center">
+      <img src="./screenshots/mobile-design-order-confirmation.png" width="300px" alt="Mobile Confirmation"/><br />
+      <sub><b>Mobile Confirmation</b></sub>
+    </td>
+    <td align="center">
+      <img src="./screenshots/mobile-design-selected.png" width="300px" alt="Mobile Selected"/><br />
+      <sub><b>Mobile Selected</b></sub>
+    </td>
+  </tr>
+</table>
 
 ### Links
 
