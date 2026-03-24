@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./blocks/fonts.css" />
+    <link rel="stylesheet" href="./blocks/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product list with cart</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__content">
+        <div aria-live="polite" class="sr-only" id="announcer"></div>
+        <h1 class="header__title">Desserts</h1>
+        <template id="card_template">
+          <div class="card">
+            <div class="card__main_content">
+              <img class="card__product_image" src="" alt="Product image" />
+              <button class="card__button_cart">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="Shopping cart"
+                />
+                Add to Cart
+              </button>
+            </div>
+            <div class="card__description">
+              <h2 class="card__name"></h2>
+              <p class="card__title"></p>
+              <p class="card__price"></p>
+            </div>
+          </div>
+        </template>
+        <template id="card__template_counter">
+          <div class="card__counter">
+            <button
+              class="card__counter_buttons card_counter_minus"
+              aria-label="Decrease quantity"
+            >
+              <img
+                class="card__counter_buttons_image"
+                src="./assets/images/icon-decrement-quantity.svg"
+                alt="Diminuir quantidade"
+              />
+            </button>
+            <p class="card__counter_quantity" aria-live="polite"></p>
+            <button
+              class="card__counter_buttons card_counter_plus"
+              aria-label="Increase quantity"
+            >
+              <img
+                class="card__counter_buttons_image"
+                src="./assets/images/icon-increment-quantity.svg"
+                alt="Aumentar quantidade"
+              />
+            </button>
+          </div>
+        </template>
+        <section class="cards"></section>
+        <!-- ----------------------------------------------------------------- -->
+        <template id="cart__template_empty">
+          <h3 class="cart__title_text">Your Cart (0)</h3>
+          <img
+            class="cart__image_empty"
+            src="./assets/images/illustration-empty-cart.svg"
+            alt="Two slices of cake"
+          />
+          <p class="cart__text_empty">Your added items will appear here</p>
+        </template>
+        <template id="cart__template_full">
+          <div class="cart__title">
+            <h3 class="cart__title_text">Your Cart</h3>
+            <p class="cart__title_number"></p>
+          </div>
+          <div class="cart__products"></div>
+          <div class="cart__total">
+            <p class="cart__total_text">Order Total</p>
+            <p class="cart__total_value"></p>
+          </div>
+          <div class="cart__carbon">
+            <img
+              class="cart__carbon_image"
+              src="./assets/images/icon-carbon-neutral.svg"
+              alt="Green tree"
+            />
+            <p class="cart__carbon_text">
+              This is a <b>carbon neutral</b> delivery
+            </p>
+          </div>
+          <button class="cart__button_confirm">Confirm Order</button>
+        </template>
+        <template id="cart__template_item">
+          <div class="cart__product">
+            <p class="cart__product_name"></p>
+            <div class="cart__product_details">
+              <p class="cart__product_quantity"></p>
+              <p class="cart__product_price"></p>
+              <p class="cart__product_total"></p>
+            </div>
+            <button class="cart__remove" aria-label="Remove item from cart">
+              <img
+                class="cart__remove_x"
+                src="./assets/images/icon-remove-item.svg"
+                alt="X button"
+                role="presentation"
+              />
+            </button>
+            <hr class="cart__divider" />
+          </div>
+        </template>
+      </section>
+      <aside class="cart"></aside>
+      <template id="cart__template_confirmation">
+        <div class="cart__confirmation">
+          <img
+            class="cart__confirmation_image"
+            src="./assets/images/icon-order-confirmed.svg"
+            alt="Green confirmation"
+          />            
+          <p class="cart__confirmation_title" id="modal-title">Order Confirmed</p>
+          <p class="cart__confirmation_subtitle">
+            We hope you enjoy your food!
+          </p>
+          <div class="cart__confirmation_products"></div>
+          <div class="cart__confirmation_order">
+            <p class="cart__confirmation_order_total">Order Total</p>
+            <p class="cart__confirmation_order_value"></p>
+          </div>
+          <button class="cart__confirmation_button">Start New Order</button>
+        </div>
+      </template>
+      <template id="cart__template_confirmation_items">
+        <div class="cart__confirmation_details">
+          <img
+            class="cart__confirmation_product_image"
+            src=""
+            alt="Product image"
+          />
+          <div class="cart__confirmation_products_left-side">
+            <p class="cart__confirmation_product_name"></p>
+            <div class="cart__confirmation_product_texts">
+              <p class="cart__confirmation_product_quantity"></p>
+              <p class="cart__confirmation_product_price"></p>
+            </div>
+          </div>
+          <p class="cart__product_confirmation_total"></p>
+        </div>
+        <hr class="cart__confirmation_divider" />
+      </template>
+      <div class="modal__overlay hidden">
+        <div class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true"></div>
+      </div>
+
+      
+
+</div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Nícolas Gomes</a>.
+    </footer>
+  </body>
+  <script src="./scripts/script.js"></script>
+</html>
