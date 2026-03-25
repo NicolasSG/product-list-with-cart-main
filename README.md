@@ -4,15 +4,18 @@ This is a solution to the [Product list with cart challenge on Frontend Mentor](
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Key Technical Features](#key-technical-features)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
+- [Frontend Mentor - Product list with cart solution](#frontend-mentor---product-list-with-cart-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshots do Projeto](#screenshots-do-projeto)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [Key Technical Features](#key-technical-features)
+    - [What I learned](#what-i-learned)
+    - [AI Collaboration](#ai-collaboration)
+  - [Author](#author)
 
 ## Overview
 
@@ -27,7 +30,7 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### 📸 Screenshots do Projeto
+### Screenshots do Projeto
 
 <details>
   <summary>🖥️ Visualização Desktop</summary>
@@ -78,7 +81,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/NicolasSG/product-list-with-cart-main](https://github.com/NicolasSG/product-list-with-cart-main)
-- Live Site URL: [https://github.com/NicolasSG/product-list-with-cart-main/deployments/github-pages](https://github.com/NicolasSG/product-list-with-cart-main/deployments/github-pages)
+- Live Site URL: [https://nicolassg.github.io/product-list-with-cart-main/](https://nicolassg.github.io/product-list-with-cart-main/)
 
 ## My process
 
@@ -98,30 +101,18 @@ Users should be able to:
 
 card_template: Renders the product grid.
 
-cart**template_empty / cart**template_full: Handles the logic for the empty vs. active shopping cart.
+cart\_\_template_empty / cart\_\_template_full: Handles the logic for the empty vs. active shopping cart.
 
 cart\_\_template_confirmation: Manages the final checkout modal.
 
 2. Advanced CSS Layouts
    The project uses a responsive grid system that adapts from a 3-column layout on desktops to a single-column layout on mobile devices.
 
-CSS
-.cards {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 33px 20px;
-}
-
-@media screen AND (max-width: 850px) {
-.cards {
-grid-template-columns: 1fr;
-}
-}
-
 3. State-Driven UI
    The JavaScript logic manages a cart array. When the user interacts with the buttons, the script clears and re-renders specific DOM sections using the template fragments, ensuring the UI stays in sync with the data.
 
-What I learned
+### What I learned
+
 State Syncing: I implemented a synchronization logic between the Product Grid and the Shopping Cart using Data-Attributes. This allowed the UI to toggle between 'Add to Cart' and 'Quantity Counter' states accurately when items were removed or updated from either side of the application."
 
 Accessibility: Implemented .sr-only (Screen Reader Only) classes for live region announcements.
