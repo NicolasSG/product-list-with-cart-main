@@ -35,20 +35,24 @@ Users should be able to:
       <img src="./screenshots/active-states.png" width="300px" alt="Active States"/><br />
       <sub><b>Active States</b></sub>
     </td>
+    </tr>
+    <tr>
     <td align="center">
       <img src="./screenshots/desktop-design-empty.png" width="300px" alt="Desktop Empty"/><br />
       <sub><b>Desktop Empty</b></sub>
-    </td>
+    </td> 
+    </tr> 
+    <tr>
     <td align="center">
       <img src="./screenshots/desktop-design-order-confirmation.png" width="300px" alt="Order Confirmation"/><br />
       <sub><b>Order Confirmation</b></sub>
-    </td>
+    </td>  
+  </tr>
+  <tr>  
     <td align="center">
       <img src="./screenshots/mobile-design-order-confirmation.png" width="300px" alt="Mobile Confirmation"/><br />
       <sub><b>Mobile Confirmation</b></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <img src="./screenshots/mobile-design-empty.png" width="300px" alt="Mobile Empty"/><br />
       <sub><b>Mobile Empty</b></sub>
@@ -62,7 +66,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/NicolasSG/product-list-with-cart-main)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process

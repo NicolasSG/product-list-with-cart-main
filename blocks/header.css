@@ -1,0 +1,10 @@
+.header__title {
+  margin: 0;
+  font-size: 40px;
+}
+
+@media screen AND (max-width: 850px) {
+  .header__title {
+    padding: 0 25px;
+  }
+}
