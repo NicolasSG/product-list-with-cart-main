@@ -27,36 +27,53 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshots
+### 📸 Screenshots do Projeto
 
-<table>
-    <tr>    
-      <img src="./screenshots/active-states.png" width="300px" alt="Active States"/><br />
-      <sub><b>Active States</b></sub>    
+<details>
+  <summary>🖥️ Visualização Desktop</summary>
+  <br>
+<table width="100%">
+    <tr>
+      <td align="center" valign="top">
+        <img src="./screenshots/desktop-design-empty.png" width="400px" alt="Desktop Empty"/><br />
+        <sub><b>Carrinho Vazio</b></sub>
+      </td>
+      <td align="center" valign="top">
+        <img src="./screenshots/desktop-design-order-confirmation.png" width="400px" alt="Order Confirmation"/><br />
+        <sub><b>Confirmação de Pedido</b></sub>
+      </td>
     </tr>
-    <tr>    
-      <img src="./screenshots/desktop-design-empty.png" width="300px" alt="Desktop Empty"/><br />
-      <sub><b>Desktop Empty</b></sub>     
-    </tr>    
-    <td align="center">
-      <img src="./screenshots/desktop-design-order-confirmation.png" width="300px" alt="Order Confirmation"/><br />
-      <sub><b>Order Confirmation</b></sub>
-    </td>    
-  <tr>  
-    <td align="center">
-      <img src="./screenshots/mobile-design-order-confirmation.png" width="300px" alt="Mobile Confirmation"/><br />
-      <sub><b>Mobile Confirmation</b></sub>
-    </td>
-    <td align="center">
-      <img src="./screenshots/mobile-design-empty.png" width="300px" alt="Mobile Empty"/><br />
-      <sub><b>Mobile Empty</b></sub>
-    </td>    
-    <td align="center">
-      <img src="./screenshots/mobile-design-selected.png" width="300px" alt="Mobile Selected"/><br />
-      <sub><b>Mobile Selected</b></sub>
-    </td>
-  </tr>
-</table>
+    <tr>
+      <td align="center" colspan="2" valign="top">
+        <img src="./screenshots/active-states.png" width="600px" alt="Active States"/><br />
+        <sub><b>Estados Ativos e Interações</b></sub>
+      </td>
+    </tr>
+  </table>
+</details>
+
+<br>
+
+<details>
+  <summary>📱 Visualização Mobile</summary>
+  <br>
+  <table width="100%">
+    <tr>
+      <td align="center" valign="top">
+        <img src="./screenshots/mobile-design-empty.png" width="200px" alt="Mobile Empty"/><br />
+        <sub><b>Mobile Vazio</b></sub>
+      </td>
+      <td align="center" valign="top">
+        <img src="./screenshots/mobile-design-selected.png" width="200px" alt="Mobile Selected"/><br />
+        <sub><b>Item Selecionado</b></sub>
+      </td>
+      <td align="center" valign="top">
+        <img src="./screenshots/mobile-design-order-confirmation.png" width="200px" alt="Mobile Confirmation"/><br />
+        <sub><b>Confirmação Mobile</b></sub>
+      </td>
+    </tr>
+  </table>
+</details>
 
 ### Links
 
@@ -136,4 +153,4 @@ What required human oversight: While the AI suggested the logic for the shopping
 ## Author
 
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Linkedin - [@nicolas-sg-br](https://www.linkedin.com/in/nicolas-sg-br/)
+- LinkedIn - [@nicolas-sg-br](https://www.linkedin.com/in/nicolas-sg-br/)
