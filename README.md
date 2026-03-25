@@ -30,24 +30,18 @@ Users should be able to:
 ### Screenshots
 
 <table>
-  <tr>
-    <td align="center">
+    <tr>    
       <img src="./screenshots/active-states.png" width="300px" alt="Active States"/><br />
-      <sub><b>Active States</b></sub>
-    </td>
+      <sub><b>Active States</b></sub>    
     </tr>
-    <tr>
-    <td align="center">
+    <tr>    
       <img src="./screenshots/desktop-design-empty.png" width="300px" alt="Desktop Empty"/><br />
-      <sub><b>Desktop Empty</b></sub>
-    </td> 
-    </tr> 
-    <tr>
+      <sub><b>Desktop Empty</b></sub>     
+    </tr>    
     <td align="center">
       <img src="./screenshots/desktop-design-order-confirmation.png" width="300px" alt="Order Confirmation"/><br />
       <sub><b>Order Confirmation</b></sub>
-    </td>  
-  </tr>
+    </td>    
   <tr>  
     <td align="center">
       <img src="./screenshots/mobile-design-order-confirmation.png" width="300px" alt="Mobile Confirmation"/><br />
@@ -66,8 +60,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/NicolasSG/product-list-with-cart-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/NicolasSG/product-list-with-cart-main](https://github.com/NicolasSG/product-list-with-cart-main)
+- Live Site URL: [https://github.com/NicolasSG/product-list-with-cart-main/deployments/github-pages](https://github.com/NicolasSG/product-list-with-cart-main/deployments/github-pages)
 
 ## My process
 
@@ -141,6 +135,5 @@ What required human oversight: While the AI suggested the logic for the shopping
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Linkedin - [@nicolas-sg-br](https://www.linkedin.com/in/nicolas-sg-br/)

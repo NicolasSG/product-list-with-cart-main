@@ -65,16 +65,19 @@ function renderCart() {
         const tempDiv = document.createElement("div");
         tempDiv.appendChild(cardTemplate.content.cloneNode(true));
 
+        const cardContainer = document.querySelector(
+          `.card:has([data-name="${item.name}"])`,
+        );
+        const realImage = cardContainer.querySelector(".card__product_image");
+
         const newWhiteButton = tempDiv.querySelector(".card__button_cart");
         newWhiteButton.dataset.name = item.name;
-        counterDiv.replaceWith(newWhiteButton);
-        const cardContainer = newWhiteButton.closest(".card");
 
-        if (cardContainer) {
-          cardContainer
-            .querySelector(".card__product_image")
-            .classList.remove("card__product_image--selected");
-        }
+        // Passe a imagem real da lista, não a do template
+        setupAddToCartButton(newWhiteButton, item, realImage);
+        counterDiv.replaceWith(newWhiteButton);
+
+        realImage.classList.remove("card__product_image--selected");
       }
 
       const announcer = document.getElementById("announcer");
@@ -93,6 +96,65 @@ function renderCart() {
   clone.querySelector(".cart__total_value").textContent =
     `$${total.toFixed(2)}`;
   container.appendChild(clone);
+}
+
+function setupAddToCartButton(button, ext, image) {
+  const addToCartAction = () => {
+    const announcer = document.getElementById("announcer");
+    announcer.textContent = `${ext.name} has been added to your cart.`;
+    image.classList.add("card__product_image--selected");
+
+    const buttonTemplate = document.querySelector("#card__template_counter");
+    const newButton = buttonTemplate.content.cloneNode(true);
+
+    const counterDiv = newButton.querySelector(".card__counter");
+    counterDiv.dataset.name = ext.name;
+
+    const quantity = newButton.querySelector(".card__counter_quantity");
+    const buttonPlus = newButton.querySelector(".card_counter_plus");
+    const buttonMinus = newButton.querySelector(".card_counter_minus");
+    const thumbnailPath = ext.image.thumbnail ? ext.image.thumbnail : ext.image;
+    quantity.textContent = 1;
+    cart.push({
+      name: ext.name,
+      price: ext.price,
+      quantity: 1,
+      image: thumbnailPath,
+    });
+    renderCart();
+
+    buttonPlus.addEventListener("click", () => {
+      const item = cart.find((i) => i.name === ext.name);
+      item.quantity += 1;
+      quantity.textContent = item.quantity;
+      const announcer = document.getElementById("announcer");
+      announcer.textContent = `${ext.name} quantity on cart is now ${item.quantity}.`;
+      renderCart();
+    });
+
+    buttonMinus.addEventListener("click", () => {
+      const item = cart.find((i) => i.name === ext.name);
+
+      if (item.quantity === 1) {
+        cart.splice(cart.indexOf(item), 1);
+        counterDiv.replaceWith(button);
+        image.classList.remove("card__product_image--selected");
+        const announcer = document.getElementById("announcer");
+        announcer.textContent = `${ext.name} removed from cart.`;
+        renderCart();
+      } else {
+        item.quantity -= 1;
+        quantity.textContent = item.quantity;
+        const announcer = document.getElementById("announcer");
+        announcer.textContent = `${ext.name} quantity on cart is now ${item.quantity}.`;
+        renderCart();
+      }
+    });
+
+    button.replaceWith(newButton);
+  };
+
+  button.addEventListener("click", addToCartAction);
 }
 
 function renderCards(extensions) {
@@ -117,59 +179,8 @@ function renderCards(extensions) {
     button.dataset.price = ext.price;
 
     button.addEventListener("click", () => {
-      const announcer = document.getElementById("announcer");
-      announcer.textContent = `${ext.name} has been added to your cart.`;
-      image.classList.add("card__product_image--selected");
-
-      const buttonTemplate = document.querySelector("#card__template_counter");
-      const newButton = buttonTemplate.content.cloneNode(true);
-
-      const quantity = newButton.querySelector(".card__counter_quantity");
-      const buttonPlus = newButton.querySelector(".card_counter_plus");
-      const buttonMinus = newButton.querySelector(".card_counter_minus");
-
-      quantity.textContent = 1;
-      cart.push({
-        name: ext.name,
-        price: ext.price,
-        quantity: 1,
-        image: ext.image.thumbnail,
-      });
-      renderCart();
-
-      buttonPlus.addEventListener("click", () => {
-        const item = cart.find((i) => i.name === ext.name);
-        item.quantity += 1;
-        quantity.textContent = item.quantity;
-        const announcer = document.getElementById("announcer");
-        announcer.textContent = `${ext.name} quantity on cart is now ${item.quantity}.`;
-        renderCart();
-      });
-
-      buttonMinus.addEventListener("click", () => {
-        const item = cart.find((i) => i.name === ext.name);
-
-        if (item.quantity === 1) {
-          cart.splice(cart.indexOf(item), 1);
-          counterDiv.replaceWith(button);
-          image.classList.remove("card__product_image--selected");
-          const announcer = document.getElementById("announcer");
-          announcer.textContent = `${ext.name} removed from cart.`;
-          renderCart();
-        } else {
-          item.quantity -= 1;
-          quantity.textContent = item.quantity;
-          const announcer = document.getElementById("announcer");
-          announcer.textContent = `${ext.name} quantity on cart is now ${item.quantity}.`;
-          renderCart();
-        }
-      });
-
-      button.replaceWith(newButton);
-
-      // para poder ser usando fora da função
-      const counterDiv = cardDiv.querySelector(".card__counter");
-      counterDiv.dataset.name = ext.name;
+      setupAddToCartButton(button, ext, image);
+      button.click();
     });
 
     button.addEventListener("focus", () => {
